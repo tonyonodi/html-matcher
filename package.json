@@ -5,19 +5,23 @@
   "main": "dist/html-matcher.cjs.js",
   "module": "dist/html-matcher.es.js",
   "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.23.0",
+    "babelrc-rollup": "^3.0.0",
     "htmlparser-benchmark": "^1.1.3",
     "htmlparser2": "^3.9.2",
     "mocha": "^3.2.0",
     "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^3.0.3",
     "rollup-watch": "^3.2.2"
   },
   "scripts": {
     "test": "mocha",
     "build": "rollup -c",
     "watch": "rollup -wc",
-    "prepublish": "npm run test && npm run build"
+    "prepublish": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
@@ -34,7 +38,7 @@
     "test": "test"
   },
   "dependencies": {
-    "@emmetio/stream-reader": "^2.0.0",
-    "@emmetio/stream-reader-utils": "^0.1.0"
+    "@emmetio/stream-reader-utils": "^0.1.0",
+    "@tonyonodi/stream-reader": "github:tonyonodi/stream-reader"
   }
 }
